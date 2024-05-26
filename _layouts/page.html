@@ -1,14 +1,14 @@
 ---
 layout: default
 ---
-{% if page.url == '/about' or page.url == '/links' or page.url == '/message' or page.url == '/17roco' %}
-	<article>
+{% if page.title == 'About' or page.title == 'Links' or page.title == 'Message' or page.title == 'Roco' %}
+
 		<div class="section_index">
 			<h1 class="title">{{ page.title }}</h1>
 
 			{{ content | indent}}
 		</div>
-	</article>
+
 {% else %}
 	<article>
 
