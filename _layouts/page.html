@@ -1,15 +1,23 @@
 ---
 layout: default
 ---
+{% if page.url == '/about' or page.url == '/links' or page.url == '/message' or page.url == '/17roco' %}
+	<article>
+		<section class="section_index">
+			<h1 class="title">{{ page.title }}</h1>
 
-<article>
+			{{ content | indent}}
+		</section>
+	</article>
+{% else %}
+	<article>
 
-	<h1 class="title">{{ page.title }}</h1>
+		<h1 class="title">{{ page.title }}</h1>
 
-	{{ content | indent}}
+		{{ content | indent}}
 
-</article>
-
+	</article>
+{% endif %}
 <div class="page-navigation code">
 	<a class="home" href="{{ "/" | prepend: site.baseurl | prepend: site.url }}" title="Back to Index">&larr; INDEX</a>
 </div>
