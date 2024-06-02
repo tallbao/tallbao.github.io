@@ -7,9 +7,34 @@ music-id: 441491828
 permalink: /archives/2019-04-06/1
 description: "MyFavorite"
 ---
-oracle账号共享
+
+### xui端口54321
+```cmd
+"location.href = basePath + 'xui/';"
+user：admin，password：admin
+```
+### Mac测试指纹
+```
+nc -v 38.63.48.33 14534
+Connection to 38.63.48.33 14534 port [tcp/*] succeeded!
+nc -v 38.63.48.33 5985
+```
+### oracle账号共享
 账号：83926039@qq.com
 密码：Oracle0.
+
+### 换固态
+m2接口和一个SATA接口  
+固态硬盘这个电脑最大支持pcle3.0的 ，做系统盘推荐带缓存的固态硬盘  
+致态pc005就很不错，固态硬盘格式化记得4k对齐就ok  
+系统用u盘做个pe 下载一个系统，开机按f12就可以进pe装系统
+
+### 本机配置
+```cmd
+C:\Windows\System32\drivers\etc里的host文件中加上
+127.0.0.1 activate.navicat.com
+127.0.0.1 www.sublimetext.com
+```
 
 佳能5D4/M50二代微单
 大疆AIR2S=6294
