@@ -2,7 +2,6 @@
 layout: page
 title: Shell
 ---
-<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -23,21 +22,21 @@ title: Shell
         var option = document.querySelector('input[name="option"]:checked').value;
             switch (option) {
               case 'bash':
-                taInput.placeholder = 'Type Bash here...'
+                taInput.placeholder = 'Type Bash here...';
                 taOutput.value = 'bash -c {echo,' + btoa(taInput.value) + '}|{base64,-d}|{bash,-i}';
                 break;
               case 'powershell':
-                taInput.placeholder = 'Type PowerShell here...'
-                poshInput = ''
+                taInput.placeholder = 'Type PowerShell here...';
+                poshInput = '';
                 for (var i = 0; i < taInput.value.length; i++) { poshInput += taInput.value[i] + unescape("%00"); }
                 taOutput.value = 'powershell.exe -NonI -W Hidden -NoP -Exec Bypass -Enc ' + btoa(poshInput);
                 break;
               case 'python':
-                taInput.placeholder = 'Type Python here...'
+                taInput.placeholder = 'Type Python here...';
                 taOutput.value = "python -c exec('" + btoa(taInput.value) + "'.decode('base64'))";
                 break;
               case 'perl':
-                taInput.placeholder = 'Type Perl here...'
+                taInput.placeholder = 'Type Perl here...';
                 taOutput.value = "perl -MMIME::Base64 -e eval(decode_base64('" + btoa(taInput.value) + "'))";
                 break;
               default:
